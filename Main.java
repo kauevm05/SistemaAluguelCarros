@@ -1,7 +1,7 @@
 import java.io.*;
 import java.util.Scanner;
 
-// 1. CLASSE ABSTRATA (Atende os requisitos de POO do PDF)
+
 abstract class Pessoa {
     private String nome, cpf;
 
@@ -19,7 +19,7 @@ abstract class Pessoa {
     public String toString() { return nome + ";" + cpf; }
 }
 
-// 2. CLASSE CLIENTE (Usa herança de Pessoa)
+
 class Cliente extends Pessoa {
     private String telefone;
 
@@ -35,7 +35,7 @@ class Cliente extends Pessoa {
     public String toString() { return getNome() + ";" + getCpf() + ";" + telefone; }
 }
 
-// 3. CLASSE CARRO
+
 class Carro {
     private String placa, modelo;
     private double valorDiaria;
@@ -56,7 +56,7 @@ class Carro {
     public String toString() { return placa + ";" + modelo + ";" + valorDiaria; }
 }
 
-// 4. CLASSE LOCACAO (Agora é uma classe COMPOSTA real, usando Cliente e Carro!)
+
 class Locacao {
     private Cliente cliente; // Classe composta 1
     private Carro carro;     // Classe composta 2
@@ -226,7 +226,7 @@ public class Main {
         } catch (Exception e) { System.out.println("Nenhum carro encontrado."); }
     }
 
-    // ATENDE O REQUISITO: Exclusão de Registros (Limpa a lista de carros para simplificar)
+    
     public static void excluirCarros() {
         try (FileWriter fw = new FileWriter("carros.txt", false)) { // false limpa o arquivo
             System.out.println("Todos os registros de carros foram excluídos com sucesso!");
