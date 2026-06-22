@@ -58,8 +58,8 @@ class Carro {
 
 
 class Locacao {
-    private Cliente cliente; // Classe composta 1
-    private Carro carro;     // Classe composta 2
+    private Cliente cliente; 
+    private Carro carro;     
     private int dias;
     private boolean tanqueCheio;
     private double valorTotal;
@@ -279,7 +279,7 @@ public class Main {
             System.out.print("Opção: ");
             opcao = Integer.parseInt(sc.nextLine());
 
-            // Usando a sintaxe '->' para não precisar de break e corrigir o bug do seu menu!
+            
             switch (opcao) {
                 case 1 -> cadastrarCliente();
                 case 2 -> consultarClientes();
