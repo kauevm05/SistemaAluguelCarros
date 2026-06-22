@@ -262,7 +262,7 @@ public class Main {
             Cliente cliente = new Cliente("Cliente Locação", cpf, "Não informado");
             double total = carro.getValorDiaria() * dias;
 
-            // Instancia a classe Locacao passando objetos compostos reais!
+         
             Locacao locacao = new Locacao(cliente, carro, dias, tanque, total);
             fw.write(locacao.toString() + "\n");
             System.out.println("Locação registrada! Total: R$ " + total);
